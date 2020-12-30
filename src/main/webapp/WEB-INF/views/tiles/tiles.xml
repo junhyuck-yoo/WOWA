@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions
+  PUBLIC "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"
+  "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+
+<tiles-definitions>
+	<definition name="template" template="/WEB-INF/views/include/chatingTemplate.jsp">
+		<put-attribute name="header" value="/WEB-INF/views/include/header.jsp" />
+		<put-attribute name="body" value="" />
+		<put-attribute name="footer" value="/WEB-INF/views/include/footer.jsp" />
+	</definition>
+	<definition name="home" extends="template">
+		<put-attribute name="body" value="/WEB-INF/views/home.jsp" />
+		<put-attribute name="title" value="tiles home test page" />
+	</definition>
+	<definition name="mypage" extends="template">
+		<put-attribute name="body" value="/WEB-INF/views/mypage.jsp" />
+		<put-attribute name="title" value="tiles mypage test page" />
+	</definition>
+	<definition name="member/*" extends="template">
+		<put-attribute name="body" value="/WEB-INF/views/member/{1}.jsp" />
+		<put-attribute name="title" value="tiles login test page" />
+	</definition>
+	<definition name="board/*" extends="template">
+		<put-attribute name="body" value="/WEB-INF/views/board/{1}.jsp" />
+		<put-attribute name="title" value="tiles board test page" />
+	</definition>
+	<definition name="crawling/*" extends="template">
+		<put-attribute name="body" value="/WEB-INF/views/crawling/{1}.jsp" />
+		<put-attribute name="title" value="tiles crawling test page" />
+	</definition>
+<!-- 	<definition name="echo/*" extends="template">
+		<put-attribute name="body" value="/WEB-INF/views/echo/WebSocket-echo.jsp" />
+		<put-attribute name="title" value="tiles webchating test page" />
+	</definition> -->	
+</tiles-definitions>  
